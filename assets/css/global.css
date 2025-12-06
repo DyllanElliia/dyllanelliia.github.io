@@ -118,10 +118,10 @@ h1, h2, h3, h4, h5, h6,
 
 /* 左上角蓝色斜斑马纹正方形 - 放大并置于文字背后 */
 .zebra-square {
-    width: 28px;
-    height: 28px;
-    top: -10px;
-    left: -100px;
+    width: 35px;
+    height: 35px;
+    top: 5px;
+    left: 5px;
     background: repeating-linear-gradient(
         45deg,
         #4A90D9,
@@ -137,10 +137,10 @@ h1, h2, h3, h4, h5, h6,
 
 /* 右下角橙色斜斑马纹圆形 - 放大并置于文字背后 */
 .zebra-circle {
-    width: 24px;
-    height: 24px;
-    bottom: -10px;
-    right: -10px;
+    width: 30px;
+    height: 30px;
+    bottom: 5px;
+    right: 5px;
     background: repeating-linear-gradient(
         45deg,
         #FF7F50,
@@ -154,24 +154,38 @@ h1, h2, h3, h4, h5, h6,
         inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* 中间偏下粉红色斜斑马纹团 - 置于文字背后 */
+/* 中间粉红色波浪装饰 ~ 形状 */
 .zebra-pink {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 12px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -20%);
-    background: repeating-linear-gradient(
-        45deg,
-        #FF69B4,
-        #FF69B4 3px,
-        #FFB6C1 3px,
-        #FFB6C1 6px
+    transform: translate(-50%, -50%);
+    background: transparent;
+    position: absolute;
+    overflow: visible;
+    z-index: 2; /* 显示在文字上方 */
+}
+
+.zebra-pink::before {
+    content: '~';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(
+        135deg,
+        #FF69B4 0%,
+        #FF85C1 50%,
+        #FFB6C1 100%
     );
-    border-radius: 50%;
-    box-shadow: 
-        0 2px 6px rgba(255, 105, 180, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(255, 105, 180, 0.4));
 }
 
 /* 导航链接 - 未选中时灰色 */
