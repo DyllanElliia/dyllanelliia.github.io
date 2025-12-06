@@ -68,33 +68,39 @@ h1, h2, h3, h4, h5, h6,
 
 /* 导航链接 - 悬停效果 */
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #FF7F50 !important;
+    color: #FF6F61 !important;
 }
 
-/* 导航链接 - 选中时橙色带玻璃质感 */
+/* 导航链接 - 选中时珊瑚橙色带玻璃质感 */
 .navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: #FF7F50 !important;
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.6) 0%,
-        rgba(255, 255, 255, 0.3) 40%,
-        rgba(255, 255, 255, 0.1) 100%
-    );
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-bottom-color: rgba(200, 200, 200, 0.3);
-    border-right-color: rgba(200, 200, 200, 0.3);
+    color: #FF6F61 !important;
+    /* 玻璃本体 - 高透明度 */
+    background: 
+        /* 顶部锐利高光条 - 模拟光源反射 */
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.4) 8%,
+            rgba(255, 255, 255, 0.05) 20%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.02) 80%,
+            rgba(255, 255, 255, 0.1) 100%
+        );
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    /* 玻璃边缘 - 折射产生的亮边 */
+    border: 1px solid rgba(255, 255, 255, 0.7);
     box-shadow: 
-        /* 玻璃投射的柔和阴影 */
-        3px 3px 8px rgba(0, 0, 0, 0.08),
-        /* 焦散效果 - 玻璃折射的微光 */
-        2px 4px 6px rgba(255, 127, 80, 0.08),
-        -1px 2px 4px rgba(255, 200, 150, 0.1),
-        /* 内部高光 */
-        inset 1px 1px 2px rgba(255, 255, 255, 0.8),
-        inset -1px -1px 2px rgba(0, 0, 0, 0.03);
-    border-radius: 10px;
+        /* 玻璃底部投射的阴影 */
+        0 4px 6px -2px rgba(0, 0, 0, 0.1),
+        /* 焦散 - 光线穿透玻璃后的聚焦 */
+        0 6px 10px -4px rgba(255, 127, 80, 0.12),
+        /* 玻璃边缘的内反射 */
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.3),
+        inset 1px 0 0 rgba(255, 255, 255, 0.4),
+        inset -1px 0 0 rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
     text-shadow: 0 0 12px rgba(255, 127, 80, 0.6);
 }
 
