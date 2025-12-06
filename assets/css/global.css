@@ -78,6 +78,8 @@ h1, h2, h3, h4, h5, h6,
 .navbar-brand-wrapper {
     position: relative;
     display: inline-block;
+    padding: 8px 12px;
+    font-family: 'Pacifico', cursive !important;
     /* 液态玻璃基础色 */
     background: linear-gradient(
         145deg,
@@ -102,45 +104,45 @@ h1, h2, h3, h4, h5, h6,
 .zebra-decoration {
     position: absolute;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
-/* 左上角蓝色斜斑马纹正方形 */
+/* 左上角蓝色斜斑马纹正方形 - 放大并置于文字背后 */
 .zebra-square {
-    width: 14px;
-    height: 14px;
-    top: -4px;
-    left: -8px;
+    width: 28px;
+    height: 28px;
+    top: 0px;
+    left: 0px;
     background: repeating-linear-gradient(
         45deg,
         #4A90D9,
-        #4A90D9 2px,
-        #6BB3F0 2px,
-        #6BB3F0 4px
+        #4A90D9 3px,
+        #6BB3F0 3px,
+        #6BB3F0 6px
     );
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 
-        0 1px 3px rgba(74, 144, 217, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        0 2px 6px rgba(74, 144, 217, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* 右下角橙色斜斑马纹圆形 */
+/* 右下角橙色斜斑马纹圆形 - 放大并置于文字背后 */
 .zebra-circle {
-    width: 12px;
-    height: 12px;
-    bottom: -2px;
-    right: -6px;
+    width: 24px;
+    height: 24px;
+    bottom: 0px;
+    right: 0px;
     background: repeating-linear-gradient(
         45deg,
         #FF7F50,
-        #FF7F50 2px,
-        #FFA07A 2px,
-        #FFA07A 4px
+        #FF7F50 3px,
+        #FFA07A 3px,
+        #FFA07A 6px
     );
     border-radius: 50%;
     box-shadow: 
-        0 1px 3px rgba(255, 127, 80, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        0 2px 6px rgba(255, 127, 80, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 /* 导航链接 - 未选中时灰色 */
