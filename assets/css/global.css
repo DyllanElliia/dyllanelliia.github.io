@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6,
     width: 35px;
     height: 35px;
     top: 5px;
-    left: 5px;
+    left: 10px;
     background: repeating-linear-gradient(
         45deg,
         #4A90D9,
@@ -137,10 +137,10 @@ h1, h2, h3, h4, h5, h6,
 
 /* 右下角橙色斜斑马纹圆形 - 放大并置于文字背后 */
 .zebra-circle {
-    width: 30px;
-    height: 30px;
-    bottom: 5px;
-    right: 5px;
+    width: 35px;
+    height: 35px;
+    bottom: 4px;
+    right: 8px;
     background: repeating-linear-gradient(
         45deg,
         #FF7F50,
@@ -156,11 +156,11 @@ h1, h2, h3, h4, h5, h6,
 
 /* 中间粉红色波浪装饰 ~ 形状 */
 .zebra-pink {
-    width: 28px;
-    height: 12px;
+    width: 36px;
+    height: 18px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-80%, -50%);
     background: transparent;
     position: absolute;
     overflow: visible;
