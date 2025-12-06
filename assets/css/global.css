@@ -89,24 +89,24 @@ h1, h2, h3, h4, h5, h6,
 .navbar-brand-text {
     position: relative;
     z-index: 1;
-    /* 液态玻璃基础色 - 加深对比度 */
+    /* 通透深色液态玻璃 */
     background: linear-gradient(
         145deg,
-        rgba(80, 90, 100, 0.95) 0%,
-        rgba(100, 115, 130, 0.9) 30%,
-        rgba(120, 140, 160, 0.85) 50%,
-        rgba(100, 115, 130, 0.9) 70%,
-        rgba(80, 90, 100, 0.95) 100%
+        rgba(45, 55, 72, 0.9) 0%,
+        rgba(55, 65, 81, 0.85) 30%,
+        rgba(40, 50, 65, 0.8) 50%,
+        rgba(55, 65, 81, 0.85) 70%,
+        rgba(45, 55, 72, 0.9) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* 增强光影效果提升可读性 */
+    /* 液态玻璃的光影效果 - 增强对比度 */
     filter: 
-        drop-shadow(0 1px 0 rgba(255, 255, 255, 0.95))
+        drop-shadow(0 1px 0 rgba(255, 255, 255, 0.6))
         drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.1))
-        drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25))
-        drop-shadow(0 4px 6px rgba(50, 80, 120, 0.2));
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2))
+        drop-shadow(0 4px 8px rgba(50, 60, 80, 0.15));
 }
 
 /* 斜斑马纹装饰基础样式 */
@@ -120,8 +120,8 @@ h1, h2, h3, h4, h5, h6,
 .zebra-square {
     width: 35px;
     height: 35px;
-    top: 7px;
-    left: 10px;
+    top: 5px;
+    left: 12px;
     background: repeating-linear-gradient(
         45deg,
         #4A90D9,
