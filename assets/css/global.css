@@ -80,6 +80,8 @@ h1, h2, h3, h4, h5, h6,
     display: inline-block;
     padding: 8px 12px;
     font-family: 'Pacifico', cursive !important;
+    font-size: 1.5rem;
+    font-weight: 400;
     /* 液态玻璃基础色 */
     background: linear-gradient(
         145deg,
@@ -142,6 +144,26 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 50%;
     box-shadow: 
         0 2px 6px rgba(255, 127, 80, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* 中间偏下粉红色斜斑马纹团 - 置于文字背后 */
+.zebra-pink {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background: repeating-linear-gradient(
+        45deg,
+        #FF69B4,
+        #FF69B4 3px,
+        #FFB6C1 3px,
+        #FFB6C1 6px
+    );
+    border-radius: 50%;
+    box-shadow: 
+        0 2px 6px rgba(255, 105, 180, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
