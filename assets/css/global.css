@@ -156,11 +156,11 @@ h1, h2, h3, h4, h5, h6,
 
 /* 中间粉红色波浪装饰 ~ 形状 */
 .zebra-pink {
-    width: 36px;
-    height: 18px;
+    width: 44px;
+    height: 24px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -10%);
     background: transparent;
     position: absolute;
     overflow: visible;
