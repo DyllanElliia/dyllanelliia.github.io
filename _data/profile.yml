@@ -50,16 +50,16 @@ education:
   position: B.S. in Software Engineering
   date: Sep. 2018 - Jul. 2022
 
-experience:
-- name: BIGAI
-  logo: /assets/images/badges/bigai.png
-  position: Research Intern
-  date: Sep. 2026 - present
+# experience:
+# - name: BIGAI
+#   logo: /assets/images/badges/bigai.png
+#   position: Research Intern
+#   date: Sep. 2026 - present
 
-awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+# awards:
+# - name: Award Name 2
+#   date: 2024
+# - name: Award Name 1 
+#   date: 2021
+# - name: A quick brown fox jumps over the lazy dog and runs away award
+#   date: 2021

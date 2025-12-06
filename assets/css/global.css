@@ -54,17 +54,18 @@ h1, h2, h3, h4, h5, h6,
     font-weight: 400;
     letter-spacing: 1px;
     /* 玻璃基础色 - 深灰带透明感 */
-    color: rgba(50, 50, 55, 0.85) !important;
+    /* color: rgba(50, 50, 55, 0.85) !important; */
+    color: rgba(202, 202, 216, 0.633) !important;
     /* 玻璃的多层效果 */
     text-shadow: 
         /* 顶部高光 - 模拟光源在玻璃表面的反射 */
-        0 -1px 0 rgba(255, 255, 255, 0.7),
+        0 -2px 0 rgba(255, 255, 255, 0.7),
         /* 底部阴影 - 玻璃的厚度 */
         0 1px 2px rgba(0, 0, 0, 0.2),
         /* 内部折射光 */
-        0 0 1px rgba(255, 255, 255, 0.5),
+        0 0 2px rgba(255, 255, 255, 0.5),
         /* 投射阴影 */
-        1px 2px 4px rgba(0, 0, 0, 0.1);
+        1px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* 导航链接 - 未选中时灰色 */
