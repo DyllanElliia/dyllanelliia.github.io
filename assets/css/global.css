@@ -124,15 +124,15 @@ h1, h2, h3, h4, h5, h6,
     left: 10px;
     background: repeating-linear-gradient(
         45deg,
-        #4A90D9,
-        #4A90D9 3px,
-        #6BB3F0 3px,
-        #6BB3F0 6px
+        rgba(135, 206, 250, 0.6),
+        rgba(135, 206, 250, 0.6) 3px,
+        rgba(173, 216, 230, 0.5) 3px,
+        rgba(173, 216, 230, 0.5) 6px
     );
     border-radius: 4px;
     box-shadow: 
-        0 2px 6px rgba(74, 144, 217, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        0 2px 6px rgba(135, 206, 250, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 /* 右下角橙色斜斑马纹圆形 - 放大并置于文字背后 */
