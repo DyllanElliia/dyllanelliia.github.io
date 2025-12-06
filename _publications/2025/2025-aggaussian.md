@@ -13,7 +13,7 @@ pub_date:       "2025"
 cover:          /assets/images/covers/2025_ag2aussian.png
 authors:
   - Zhaonan Wang
-  - Manyi Li<sup>$\dagger$</sup>
+  - Manyi Li#
   - Changhe Tu
 links:
   ArXiv: https://arxiv.org/abs/2508.01740v1
