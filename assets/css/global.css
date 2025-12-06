@@ -83,6 +83,12 @@ h1, h2, h3, h4, h5, h6,
     font-family: 'Pacifico', cursive !important;
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+/* 文字单独的样式，确保在装饰元素上方 */
+.navbar-brand-text {
+    position: relative;
+    z-index: 1;
     /* 液态玻璃基础色 */
     background: linear-gradient(
         145deg,
