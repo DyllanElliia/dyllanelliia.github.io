@@ -6,9 +6,21 @@
                     {% assign show_edu = include.show_education | default: true %}
                     {% assign show_exp = include.show_experience | default: true %}
                     {% assign show_awd = include.show_awards | default: true %}
+                    
+                    {% comment %} 计算要显示的项目数量来决定列宽 {% endcomment %}
+                    {% assign visible_count = 0 %}
+                    {% if site.data.profile.education and show_edu %}{% assign visible_count = visible_count | plus: 1 %}{% endif %}
+                    {% if site.data.profile.experience and show_exp %}{% assign visible_count = visible_count | plus: 1 %}{% endif %}
+                    {% if site.data.profile.awards and show_awd %}{% assign visible_count = visible_count | plus: 1 %}{% endif %}
+                    
+                    {% if visible_count == 1 %}
+                        {% assign col_class = "col-12" %}
+                    {% else %}
+                        {% assign col_class = "col-lg-6" %}
+                    {% endif %}
 
                     {% if site.data.profile.education and show_edu %}
-                    <div class="col-lg-6">
+                    <div class="{{ col_class }}">
                         <div class="mx-2 my-1">
                             <h6>Education</h6>
                             <ul class="list-unstyled mb-1">
@@ -31,7 +43,7 @@
                     {% endif %}
 
                     {% if site.data.profile.experience and show_exp %}
-                    <div class="col-lg-6">
+                    <div class="{{ col_class }}">
                         <div class="mx-2 my-1">
                             <h6>Experience</h6>
                             <ul class="list-unstyled mb-1">
@@ -54,7 +66,7 @@
                     {% endif %}
 
                     {% if site.data.profile.awards and show_awd %}
-                    <div class="col-lg-6">
+                    <div class="{{ col_class }}">
                         <div class="mx-2 my-1">
                             <h6>Honors & Awards</h6>
                             <ul class="list small pl-3 mb-1">
