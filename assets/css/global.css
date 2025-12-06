@@ -43,7 +43,45 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .navbar {
-    opacity: 0.95;
+    opacity: 0.98;
+    background-color: #ffffff !important;
+}
+
+/* Navbar brand - 黑色带质感阴影 */
+.navbar-brand-custom {
+    color: #1a1a1a !important;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.3),
+        0px 0px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* 导航链接 - 未选中时灰色 */
+.navbar-light .navbar-nav .nav-link {
+    color: #888888 !important;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 8px 16px !important;
+    margin: 0 4px;
+}
+
+/* 导航链接 - 悬停效果 */
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #FF7F50 !important;
+}
+
+/* 导航链接 - 选中时橙色带LED发光效果 */
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    color: #FF7F50 !important;
+    background: rgba(255, 127, 80, 0.1);
+    box-shadow: 
+        0 0 10px rgba(255, 127, 80, 0.5),
+        0 0 20px rgba(255, 127, 80, 0.3),
+        0 0 30px rgba(255, 127, 80, 0.2),
+        inset 0 0 10px rgba(255, 127, 80, 0.1);
+    border-radius: 8px;
+    text-shadow: 0 0 8px rgba(255, 127, 80, 0.6);
 }
 
 .inline-badge {
