@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6,
 .zebra-square {
     width: 35px;
     height: 35px;
-    top: 5px;
+    top: 7px;
     left: 10px;
     background: repeating-linear-gradient(
         45deg,
@@ -137,8 +137,8 @@ h1, h2, h3, h4, h5, h6,
 
 /* 右下角橙色斜斑马纹圆形 - 放大并置于文字背后 */
 .zebra-circle {
-    width: 35px;
-    height: 35px;
+    width: 32px;
+    height: 32px;
     bottom: 4px;
     right: 8px;
     background: repeating-linear-gradient(
@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6,
     height: 18px;
     top: 50%;
     left: 50%;
-    transform: translate(-80%, -50%);
+    transform: translate(-50%, -80%);
     background: transparent;
     position: absolute;
     overflow: visible;
