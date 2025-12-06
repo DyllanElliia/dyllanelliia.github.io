@@ -48,24 +48,99 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Navbar brand - 花体玻璃质感 */
-.navbar-brand-custom {
+/* .navbar-brand-custom {
     font-family: 'Pacifico', cursive !important;
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 1px;
     /* 玻璃基础色 - 深灰带透明感 */
-    /* color: rgba(50, 50, 55, 0.85) !important; */
-    color: rgba(202, 202, 216, 0.633) !important;
+    color: rgba(50, 50, 55, 0.85) !important;
     /* 玻璃的多层效果 */
     text-shadow: 
         /* 顶部高光 - 模拟光源在玻璃表面的反射 */
-        0 -2px 0 rgba(255, 255, 255, 0.7),
+        0 -1px 0 rgba(255, 255, 255, 0.7),
         /* 底部阴影 - 玻璃的厚度 */
         0 1px 2px rgba(0, 0, 0, 0.2),
         /* 内部折射光 */
-        0 0 2px rgba(255, 255, 255, 0.5),
+        0 0 1px rgba(255, 255, 255, 0.5),
         /* 投射阴影 */
-        1px 2px 2px rgba(0, 0, 0, 0.1);
+        1px 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+/* Navbar brand - 花体Liquid Glass 液态玻璃质感 */
+.navbar-brand-custom {
+    font-family: 'Pacifico', cursive !important;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.navbar-brand-wrapper {
+    position: relative;
+    display: inline-block;
+    /* 液态玻璃基础色 */
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.95) 0%,
+        rgba(240, 245, 250, 0.9) 30%,
+        rgba(220, 235, 245, 0.85) 50%,
+        rgba(240, 245, 250, 0.9) 70%,
+        rgba(255, 255, 255, 0.95) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* 液态玻璃的光影效果 */
+    filter: 
+        drop-shadow(0 1px 0 rgba(255, 255, 255, 0.9))
+        drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.05))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15))
+        drop-shadow(0 4px 8px rgba(100, 150, 200, 0.1));
+}
+
+/* 斜斑马纹装饰基础样式 */
+.zebra-decoration {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* 左上角蓝色斜斑马纹正方形 */
+.zebra-square {
+    width: 14px;
+    height: 14px;
+    top: -4px;
+    left: -8px;
+    background: repeating-linear-gradient(
+        45deg,
+        #4A90D9,
+        #4A90D9 2px,
+        #6BB3F0 2px,
+        #6BB3F0 4px
+    );
+    border-radius: 2px;
+    box-shadow: 
+        0 1px 3px rgba(74, 144, 217, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* 右下角橙色斜斑马纹圆形 */
+.zebra-circle {
+    width: 12px;
+    height: 12px;
+    bottom: -2px;
+    right: -6px;
+    background: repeating-linear-gradient(
+        45deg,
+        #FF7F50,
+        #FF7F50 2px,
+        #FFA07A 2px,
+        #FFA07A 4px
+    );
+    border-radius: 50%;
+    box-shadow: 
+        0 1px 3px rgba(255, 127, 80, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 /* 导航链接 - 未选中时灰色 */
