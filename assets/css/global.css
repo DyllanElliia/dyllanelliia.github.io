@@ -124,15 +124,15 @@ h1, h2, h3, h4, h5, h6,
     left: 10px;
     background: repeating-linear-gradient(
         45deg,
-        #5BA8F5,
-        #5BA8F5 3px,
-        #8DD0FF 3px,
-        #8DD0FF 6px
+        #6EC6FF,
+        #6EC6FF 3px,
+        #A8E4FF 3px,
+        #A8E4FF 6px
     );
     border-radius: 4px;
     box-shadow: 
-        0 2px 6px rgba(91, 168, 245, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        0 2px 8px rgba(110, 198, 255, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 /* 右下角橙色斜斑马纹圆形 - 放大并置于文字背后 */
@@ -143,15 +143,15 @@ h1, h2, h3, h4, h5, h6,
     right: 7px;
     background: repeating-linear-gradient(
         45deg,
-        #FF7F50,
-        #FF7F50 3px,
-        #FFA07A 3px,
-        #FFA07A 6px
+        #FFA06A,
+        #FFA06A 3px,
+        #FFCBA4 3px,
+        #FFCBA4 6px
     );
     border-radius: 50%;
     box-shadow: 
-        0 2px 6px rgba(255, 127, 80, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        0 2px 8px rgba(255, 160, 106, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 /* 中间粉红色波浪装饰 ~ 形状 */
