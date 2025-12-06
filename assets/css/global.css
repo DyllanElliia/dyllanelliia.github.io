@@ -53,22 +53,18 @@ h1, h2, h3, h4, h5, h6,
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 1px;
-    /* 玻璃质感 - 透明渐变色 */
-    background: linear-gradient(
-        135deg,
-        rgba(60, 60, 60, 0.9) 0%,
-        rgba(120, 120, 120, 0.7) 25%,
-        rgba(180, 180, 180, 0.6) 50%,
-        rgba(120, 120, 120, 0.7) 75%,
-        rgba(60, 60, 60, 0.9) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    /* 玻璃反射高光 */
-    filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.8))
-            drop-shadow(-1px -1px 1px rgba(0, 0, 0, 0.2))
-            drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.15));
+    /* 玻璃基础色 - 深灰带透明感 */
+    color: rgba(50, 50, 55, 0.85) !important;
+    /* 玻璃的多层效果 */
+    text-shadow: 
+        /* 顶部高光 - 模拟光源在玻璃表面的反射 */
+        0 -1px 0 rgba(255, 255, 255, 0.7),
+        /* 底部阴影 - 玻璃的厚度 */
+        0 1px 2px rgba(0, 0, 0, 0.2),
+        /* 内部折射光 */
+        0 0 1px rgba(255, 255, 255, 0.5),
+        /* 投射阴影 */
+        1px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 导航链接 - 未选中时灰色 */
@@ -89,13 +85,10 @@ h1, h2, h3, h4, h5, h6,
 .navbar-light .navbar-nav .nav-item.active .nav-link {
     color: #FF6F61 !important;
     text-shadow: 
-        /* LED 核心发光 */
-        0 0 4px rgba(255, 111, 97, 0.9),
-        0 0 8px rgba(255, 111, 97, 0.7),
-        0 0 16px rgba(255, 111, 97, 0.5),
-        0 0 32px rgba(255, 111, 97, 0.3),
-        /* 轻微的白色高光增加质感 */
-        0 0 2px rgba(255, 255, 255, 0.8);
+        /* LED 柔和发光 */
+        0 0 3px rgba(255, 111, 97, 0.5),
+        0 0 8px rgba(255, 111, 97, 0.3),
+        0 0 16px rgba(255, 111, 97, 0.15);
 }
 
 .inline-badge {
