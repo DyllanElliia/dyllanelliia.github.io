@@ -8,7 +8,7 @@ positions:
   # logo: /assets/images/badges/Shandong_University.png  # Logo is optional
 
 
-email: "DyllanElliia_wzn@163.com"
+email: "Dyllan_wzn@outlook.com"
 # cv_link: link-to-your-cv-file
 gscholar: yKSnCCwAAAAJ  # This is an example, replace it with your own Google Scholar ID
 github: DyllanElliia
@@ -36,7 +36,7 @@ education:
 - name: Beijing Institute for General Artificial Intelligence
   logo: /assets/images/badges/bigai.png
   position: Joint PhD Program with BIGAI
-  date: Sep. 2025 - present
+  date: Start -> Sep. 2026
 - name: Shandong University
   logo: /assets/images/badges/sdu.png
   position: Ph.D. Student in Computer Science
