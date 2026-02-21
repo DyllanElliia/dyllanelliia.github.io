@@ -261,10 +261,16 @@ div.lazy {
     position: fixed;
     z-index: 1070;
     pointer-events: none;
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: opacity 0.25s ease, box-shadow 0.3s ease;
+}
+
+.portrait-clone.active {
+    opacity: 1;
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.18),
         0 2px 12px rgba(0, 0, 0, 0.10);
-    transition: opacity 0.2s ease;
 }
 
 /* Portrait tooltip - 白色流体玻璃风格 */

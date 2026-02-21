@@ -36,7 +36,9 @@ $(function () {
             boundary: 'window',
             template: '<div class="tooltip portrait-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
         });
-        // Set tooltip width before it becomes visible to avoid first-show width flash
+        // Clone portrait and blur backdrop with smooth transition
+        var $clone = null;
+        // Create clone early (before tooltip is visible) so it's in place when blur kicks in
         $img.on('inserted.bs.tooltip', function() {
             var $card = $img.closest('.card');
             var cardWidth = $card.length ? $card.outerWidth() : $img.outerWidth();
@@ -47,12 +49,7 @@ $(function () {
                 $tip.find('.tooltip-inner').css({'max-width': 'none', 'width': '100%'});
                 $img.tooltip('update');
             }
-        });
-        // Show backdrop blur when tooltip is fully shown
-        var $clone = null;
-        $img.on('shown.bs.tooltip', function() {
-            $backdrop.addClass('active');
-            // Clone portrait image above the blur overlay
+            // Prepare clone
             var rect = $img[0].getBoundingClientRect();
             $clone = $img.clone()
                 .removeClass('img-thumbnail')
@@ -67,9 +64,17 @@ $(function () {
                 })
                 .appendTo('body');
         });
-        // Hide backdrop blur when tooltip hides
-        $img.on('hidden.bs.tooltip', function() {
+        // Activate blur + clone shadow together
+        $img.on('shown.bs.tooltip', function() {
+            $backdrop.addClass('active');
+            if ($clone) $clone.addClass('active');
+        });
+        // Fade out and clean up
+        $img.on('hide.bs.tooltip', function() {
             $backdrop.removeClass('active');
+            if ($clone) $clone.removeClass('active');
+        });
+        $img.on('hidden.bs.tooltip', function() {
             if ($clone) {
                 $clone.remove();
                 $clone = null;
