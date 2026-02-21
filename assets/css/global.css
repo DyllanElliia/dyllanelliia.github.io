@@ -256,3 +256,62 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+/* Portrait tooltip - 白色流体玻璃风格 */
+.tooltip.portrait-tooltip .tooltip-inner {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    padding: 12px 18px;
+    max-width: 380px;
+    text-align: left;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 2px 8px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    /* 黑色立体字 */
+    color: rgba(30, 30, 35, 0.9);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.08),
+        0 0.5px 0 rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+}
+
+.tooltip.portrait-tooltip .tooltip-inner p {
+    margin-bottom: 4px;
+}
+
+.tooltip.portrait-tooltip .tooltip-inner p:last-child {
+    margin-bottom: 0;
+}
+
+/* 代码风格 */
+.tooltip.portrait-tooltip .tooltip-inner code {
+    font-family: 'SF Mono', 'Fira Code', 'Source Code Pro', 'Menlo', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(25, 25, 30, 0.95);
+    background: rgba(0, 0, 0, 0.06);
+    padding: 2px 6px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.1),
+        0 0.5px 0 rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.3px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* 箭头样式 */
+.tooltip.portrait-tooltip .arrow::before {
+    border-top-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.tooltip.portrait-tooltip.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: rgba(255, 255, 255, 0.75) !important;
+}
+

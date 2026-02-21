@@ -29,8 +29,15 @@ short_bio: >-
   </p>
 
 portrait_url: /assets/images/photos/profile.png
+# portrait_caption: >-
+#   Peak handsomeness achieved! Currently working on a novel approach to surpass this SOTA.
 portrait_caption: >-
-  Peak handsomeness achieved! Currently working on a novel approach to surpass this SOTA.
+  <p>
+  Checkpoint saved. Current reconstruction loss: still converging.
+  </p>
+  <p>
+  <code>HEAD_RGB = DySim.Render(zn, view, bg=&quot;white&quot;, t=&quot;2022&quot;)</code>
+  </p>
 
 education:
 - name: Beijing Institute for General Artificial Intelligence

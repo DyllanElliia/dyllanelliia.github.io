@@ -25,6 +25,11 @@ $(function () {
     $('div.lazy.always-load').Lazy({visibleOnly: false, ...lazyLoadOptions});
 
     $('[data-toggle="tooltip"]').tooltip()
+    // Portrait tooltip: enable HTML and add custom class
+    $('.figure-img[data-toggle="tooltip"]').tooltip('dispose').tooltip({
+        html: true,
+        template: '<div class="tooltip portrait-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    })
 
     var $grid = $('.grid').masonry({
         "percentPosition": true,
