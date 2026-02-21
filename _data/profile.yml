@@ -33,7 +33,7 @@ portrait_url: /assets/images/photos/profile.png
 #   Peak handsomeness achieved! Currently working on a novel approach to surpass this SOTA.
 portrait_caption: >-
   <p>
-  []Checkpoint saved. Current reconstruction loss: still converging.
+  [INFO] Checkpoint saved. Current reconstruction loss: still converging.
   </p>
   <p>
   <code><span class="syn-var">HEAD_RGB</span> <span class="syn-op">=</span> <span class="syn-cls">DySim</span><span class="syn-op">.</span><span class="syn-fn">Render</span><span class="syn-op">(</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">zn</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">view</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-param">bg</span><span class="syn-op">=</span><span class="syn-str">&quot;white&quot;</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-param">t</span><span class="syn-op">=</span><span class="syn-str">&quot;2022&quot;</span><br><span class="syn-op">)</span></code>

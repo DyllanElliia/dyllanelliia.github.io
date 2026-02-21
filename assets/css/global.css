@@ -300,7 +300,9 @@ div.lazy {
     border: 1px solid rgba(0, 0, 0, 0.08);
     text-shadow: none;
     letter-spacing: 0.2px;
-    display: inline-block;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
     white-space: normal;
     line-height: 1.7;
     text-align: left;

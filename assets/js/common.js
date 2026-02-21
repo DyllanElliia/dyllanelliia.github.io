@@ -25,11 +25,25 @@ $(function () {
     $('div.lazy.always-load').Lazy({visibleOnly: false, ...lazyLoadOptions});
 
     $('[data-toggle="tooltip"]').tooltip()
-    // Portrait tooltip: enable HTML and add custom class
-    $('.figure-img[data-toggle="tooltip"]').tooltip('dispose').tooltip({
-        html: true,
-        template: '<div class="tooltip portrait-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
-    })
+    // Portrait tooltip: enable HTML, custom class, and match portrait width
+    $('.figure-img[data-toggle="tooltip"]').each(function() {
+        var $img = $(this);
+        $img.tooltip('dispose').tooltip({
+            html: true,
+            template: '<div class="tooltip portrait-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+        });
+        // Set tooltip width to match the portrait container
+        $img.on('shown.bs.tooltip', function() {
+            var imgWidth = $img.outerWidth();
+            var tipId = $img.attr('aria-describedby');
+            if (tipId && imgWidth) {
+                var $tip = $('#' + tipId);
+                $tip.css('width', imgWidth + 'px');
+                $tip.find('.tooltip-inner').css({'max-width': 'none', 'width': '100%'});
+                $img.tooltip('update');
+            }
+        });
+    });
 
     var $grid = $('.grid').masonry({
         "percentPosition": true,
