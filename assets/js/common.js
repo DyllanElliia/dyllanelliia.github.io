@@ -36,9 +36,8 @@ $(function () {
             boundary: 'window',
             template: '<div class="tooltip portrait-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
         });
-        // Set tooltip width to match the parent card and show backdrop blur
-        $img.on('shown.bs.tooltip', function() {
-            $backdrop.addClass('active');
+        // Set tooltip width before it becomes visible to avoid first-show width flash
+        $img.on('inserted.bs.tooltip', function() {
             var $card = $img.closest('.card');
             var cardWidth = $card.length ? $card.outerWidth() : $img.outerWidth();
             var tipId = $img.attr('aria-describedby');
@@ -48,6 +47,10 @@ $(function () {
                 $tip.find('.tooltip-inner').css({'max-width': 'none', 'width': '100%'});
                 $img.tooltip('update');
             }
+        });
+        // Show backdrop blur when tooltip is fully shown
+        $img.on('shown.bs.tooltip', function() {
+            $backdrop.addClass('active');
         });
         // Hide backdrop blur when tooltip hides
         $img.on('hidden.bs.tooltip', function() {
