@@ -33,11 +33,17 @@ portrait_url: /assets/images/photos/profile.png
 #   Peak handsomeness achieved! Currently working on a novel approach to surpass this SOTA.
 portrait_caption: >-
   <p>
-  <span class="nb-info-badge">INFO</span> Checkpoint saved. Current reconstruction loss: still converging.
+  <span class="nb-info-badge">INFO</span>Checkpoint saved.
+  </p>
+  <p>
+  Current reconstruction loss: still converging... 
+  </p>
+  <p>
+  Note: rendered appearance may vary.
   </p>
   <div class="nb-cell-header"><span class="nb-cell-title">Visual Checkpoint</span><span class="nb-cell-prompt">In<span class="nb-cell-num">[42]</span>:</span></div>
   <p>
-  <code><span class="syn-var">HEAD_RGB</span> <span class="syn-op">=</span> <span class="syn-cls">DySim</span><span class="syn-op">.</span><span class="syn-fn">Render</span><span class="syn-op">(</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">zn</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">view</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-param">bg</span><span class="syn-op">=</span><span class="syn-str">&quot;white&quot;</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-param">t</span><span class="syn-op">=</span><span class="syn-str">&quot;2022&quot;</span><br><span class="syn-op">)</span></code>
+  <code><span class="syn-var">HEAD_RGB</span> <span class="syn-op">=</span> <span class="syn-cls">DySim</span><span class="syn-op">.</span><span class="syn-fn">Render</span><span class="syn-op">(</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">zn</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">cam</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-param">bg</span><span class="syn-op">=</span><span class="syn-str">&quot;white&quot;</span><span class="syn-op">,</span><br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-param">t</span><span class="syn-op">=</span><span class="syn-str">&quot;2022&quot;</span><br><span class="syn-op">)</span></code>
   </p>
 
 education:
