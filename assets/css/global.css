@@ -338,6 +338,17 @@ div.lazy {
     top: -1px;
 }
 
+/* Blockquote style */
+.tooltip.portrait-tooltip .nb-blockquote {
+    border-left: 3px solid #3b82f6;
+    background: rgba(59, 130, 246, 0.08);
+    padding: 4px 10px;
+    border-radius: 0 4px 4px 0;
+    color: rgba(30, 30, 35, 0.7);
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
 /* Notebook cell header */
 .tooltip.portrait-tooltip .nb-cell-header {
     display: flex;
