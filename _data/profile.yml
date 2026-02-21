@@ -36,10 +36,10 @@ portrait_caption: >-
   <span class="nb-info-badge">INFO</span>Checkpoint saved.
   </p>
   <p>
-  Current reconstruction loss: still converging... 
+  Recon loss: still converging...
   </p>
   <p>
-  Note: rendered appearance may vary.
+  > Rendered results may vary.
   </p>
   <div class="nb-cell-header"><span class="nb-cell-title">Visual Checkpoint</span><span class="nb-cell-prompt">In<span class="nb-cell-num">[42]</span>:</span></div>
   <p>
