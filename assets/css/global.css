@@ -256,6 +256,26 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+/* Portrait tooltip backdrop blur overlay */
+.portrait-tooltip-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1069; /* just below tooltip z-index (1070) */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.portrait-tooltip-backdrop.active {
+    opacity: 1;
+}
+
 /* Portrait tooltip - 白色流体玻璃风格 */
 .tooltip.portrait-tooltip .tooltip-inner {
     background: linear-gradient(
