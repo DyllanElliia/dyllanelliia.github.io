@@ -25,20 +25,22 @@ $(function () {
     $('div.lazy.always-load').Lazy({visibleOnly: false, ...lazyLoadOptions});
 
     $('[data-toggle="tooltip"]').tooltip()
-    // Portrait tooltip: enable HTML, custom class, and match portrait width
+    // Portrait tooltip: enable HTML, custom class, and match card width
     $('.figure-img[data-toggle="tooltip"]').each(function() {
         var $img = $(this);
         $img.tooltip('dispose').tooltip({
             html: true,
+            boundary: 'window',
             template: '<div class="tooltip portrait-tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
         });
-        // Set tooltip width to match the portrait container
+        // Set tooltip width to match the parent card
         $img.on('shown.bs.tooltip', function() {
-            var imgWidth = $img.outerWidth();
+            var $card = $img.closest('.card');
+            var cardWidth = $card.length ? $card.outerWidth() : $img.outerWidth();
             var tipId = $img.attr('aria-describedby');
-            if (tipId && imgWidth) {
+            if (tipId && cardWidth) {
                 var $tip = $('#' + tipId);
-                $tip.css('width', imgWidth + 'px');
+                $tip.css('width', cardWidth + 'px');
                 $tip.find('.tooltip-inner').css({'max-width': 'none', 'width': '100%'});
                 $img.tooltip('update');
             }
