@@ -49,14 +49,31 @@ $(function () {
             }
         });
         // Show backdrop blur when tooltip is fully shown
+        var $clone = null;
         $img.on('shown.bs.tooltip', function() {
             $backdrop.addClass('active');
-            $img.addClass('portrait-elevated');
+            // Clone portrait image above the blur overlay
+            var rect = $img[0].getBoundingClientRect();
+            $clone = $img.clone()
+                .removeClass('img-thumbnail')
+                .removeAttr('data-toggle title aria-describedby data-original-title')
+                .addClass('portrait-clone')
+                .css({
+                    top: rect.top + 'px',
+                    left: rect.left + 'px',
+                    width: rect.width + 'px',
+                    height: rect.height + 'px',
+                    borderRadius: $img.css('border-radius')
+                })
+                .appendTo('body');
         });
         // Hide backdrop blur when tooltip hides
         $img.on('hidden.bs.tooltip', function() {
             $backdrop.removeClass('active');
-            $img.removeClass('portrait-elevated');
+            if ($clone) {
+                $clone.remove();
+                $clone = null;
+            }
         });
     });
 
