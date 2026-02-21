@@ -47,26 +47,6 @@ h1, h2, h3, h4, h5, h6,
     background-color: #ffffff !important;
 }
 
-/* Navbar brand - 花体玻璃质感 */
-/* .navbar-brand-custom {
-    font-family: 'Pacifico', cursive !important;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-    /* 玻璃基础色 - 深灰带透明感 */
-    color: rgba(50, 50, 55, 0.85) !important;
-    /* 玻璃的多层效果 */
-    text-shadow: 
-        /* 顶部高光 - 模拟光源在玻璃表面的反射 */
-        0 -1px 0 rgba(255, 255, 255, 0.7),
-        /* 底部阴影 - 玻璃的厚度 */
-        0 1px 2px rgba(0, 0, 0, 0.2),
-        /* 内部折射光 */
-        0 0 1px rgba(255, 255, 255, 0.5),
-        /* 投射阴影 */
-        1px 2px 4px rgba(0, 0, 0, 0.1);
-} */
-
 /* Navbar brand - 花体Liquid Glass 液态玻璃质感 */
 .navbar-brand-custom {
     font-family: 'Pacifico', cursive !important;
@@ -274,6 +254,16 @@ div.lazy {
 
 .portrait-tooltip-backdrop.active {
     opacity: 1;
+}
+
+/* Portrait image floats above the blur backdrop */
+.figure-img.portrait-elevated {
+    position: relative;
+    z-index: 1070;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.18),
+        0 2px 12px rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.25s ease, z-index 0s;
 }
 
 /* Portrait tooltip - 白色流体玻璃风格 */

@@ -51,10 +51,12 @@ $(function () {
         // Show backdrop blur when tooltip is fully shown
         $img.on('shown.bs.tooltip', function() {
             $backdrop.addClass('active');
+            $img.addClass('portrait-elevated');
         });
         // Hide backdrop blur when tooltip hides
         $img.on('hidden.bs.tooltip', function() {
             $backdrop.removeClass('active');
+            $img.removeClass('portrait-elevated');
         });
     });
 
