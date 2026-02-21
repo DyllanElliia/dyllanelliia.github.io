@@ -258,9 +258,9 @@ div.lazy {
 
 /* Portrait tooltip - 白色流体玻璃风格 */
 .tooltip.portrait-tooltip .tooltip-inner {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 14px;
     padding: 12px 18px;
@@ -292,18 +292,44 @@ div.lazy {
 .tooltip.portrait-tooltip .tooltip-inner code {
     font-family: 'SF Mono', 'Fira Code', 'Source Code Pro', 'Menlo', monospace;
     font-size: 0.78rem;
-    font-weight: 600;
-    color: rgba(25, 25, 30, 0.95);
-    background: rgba(0, 0, 0, 0.06);
-    padding: 2px 6px;
-    border-radius: 5px;
+    font-weight: 500;
+    color: #24292f;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 6px 10px;
+    border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    text-shadow:
-        0 1px 1px rgba(0, 0, 0, 0.1),
-        0 0.5px 0 rgba(255, 255, 255, 0.5);
-    letter-spacing: 0.3px;
+    text-shadow: none;
+    letter-spacing: 0.2px;
     display: inline-block;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* GitHub Light 语法高亮 */
+.tooltip.portrait-tooltip .syn-var {
+    color: #0550ae;
+    text-shadow: 0 0.5px 0 rgba(255,255,255,0.5);
+}
+.tooltip.portrait-tooltip .syn-cls {
+    color: #953800;
+    text-shadow: 0 0.5px 0 rgba(255,255,255,0.5);
+}
+.tooltip.portrait-tooltip .syn-fn {
+    color: #8250df;
+    text-shadow: 0 0.5px 0 rgba(255,255,255,0.5);
+}
+.tooltip.portrait-tooltip .syn-str {
+    color: #0a3069;
+    text-shadow: 0 0.5px 0 rgba(255,255,255,0.5);
+}
+.tooltip.portrait-tooltip .syn-op {
+    color: #24292f;
+}
+.tooltip.portrait-tooltip .syn-param {
+    color: #953800;
+    font-style: italic;
+    text-shadow: 0 0.5px 0 rgba(255,255,255,0.5);
 }
 
 /* 箭头样式 */
