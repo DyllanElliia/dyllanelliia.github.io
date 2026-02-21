@@ -38,6 +38,7 @@ $(function () {
         });
         // Clone portrait and blur backdrop with smooth transition
         var $clone = null;
+        var tooltipVisible = false; // track intended state to avoid race condition
         // Create clone early (before tooltip is visible) so it's in place when blur kicks in
         $img.on('inserted.bs.tooltip', function() {
             var $card = $img.closest('.card');
@@ -64,18 +65,29 @@ $(function () {
                 })
                 .appendTo('body');
         });
-        // Activate blur + clone shadow together
+        // Activate blur + clone shadow together (only if still intended)
         $img.on('shown.bs.tooltip', function() {
+            if (!tooltipVisible) {
+                // Mouse already left — force hide immediately
+                $img.tooltip('hide');
+                return;
+            }
             $backdrop.addClass('active');
             if ($clone) $clone.addClass('active');
         });
+        // Track mouse enter/leave for intended state
+        $img.on('mouseenter', function() { tooltipVisible = true; });
+        $img.on('mouseleave', function() { tooltipVisible = false; });
         // Fade out and clean up
         $img.on('hide.bs.tooltip', function() {
             $backdrop.removeClass('active');
             if ($clone) $clone.removeClass('active');
         });
         $img.on('hidden.bs.tooltip', function() {
+            // Ensure backdrop is always cleaned up (guards against race condition)
+            $backdrop.removeClass('active');
             if ($clone) {
+                $clone.removeClass('active');
                 $clone.remove();
                 $clone = null;
             }

@@ -239,19 +239,19 @@ div.lazy {
 /* Portrait hover hint - coral orange text with animated arrow */
 .portrait-hover-hint {
     position: absolute;
-    top: -28px;
-    left: 0;
-    width: 100%;
-    text-align: center;
+    top: 6px;
+    left: 8px;
+    z-index: 2;
     color: #FF6F61;
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.3px;
     pointer-events: none;
-    opacity: 0.85;
+    opacity: 0.88;
     white-space: nowrap;
     text-shadow:
-        0 1px 2px rgba(255, 111, 97, 0.15);
+        0 1px 3px rgba(255, 255, 255, 0.9),
+        0 0 6px rgba(255, 255, 255, 0.7);
     transition: opacity 0.3s ease;
 }
 
