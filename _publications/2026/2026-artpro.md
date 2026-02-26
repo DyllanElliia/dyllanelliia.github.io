@@ -14,11 +14,11 @@ cover:          /assets/images/covers/2026_artpro.png
 authors:
   - Xuelu Li*
   - Zhaonan Wang*
-  - Xiaogang Wang
+  - Xiaogang Wang#
   - Lei Wu
   - Manyi Li#
   - Changhe Tu
 links:
-  ComingSoon: https://zhaonan.wang
+  Coming Soon: https://zhaonan.wang
   
 ---
