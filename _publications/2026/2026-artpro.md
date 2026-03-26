@@ -19,6 +19,7 @@ authors:
   - Manyi Li#
   - Changhe Tu
 links:
-  Coming Soon: https://zhaonan.wang
+  ArXiv: https://arxiv.org/abs/2602.22666
+  Code Coming Soon: https://zhaonan.wang
   
 ---

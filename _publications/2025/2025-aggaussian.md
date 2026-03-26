@@ -16,7 +16,7 @@ authors:
   - Manyi Li#
   - Changhe Tu
 links:
-  ArXiv: https://arxiv.org/abs/2508.01740v1
+  ArXiv: https://arxiv.org/abs/2508.01740
   Code: https://github.com/DyllanElliia/AGGaussian
   Poster: https://raw.githubusercontent.com/DyllanElliia/dyllanelliia.github.io/main/assets/images/poster/iccv25_agg_poster.png
   
