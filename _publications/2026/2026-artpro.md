@@ -20,6 +20,6 @@ authors:
   - Changhe Tu
 links:
   ArXiv: https://arxiv.org/abs/2602.22666
-  Code Coming Soon: https://zhaonan.wang
+  Code Coming Soon in June: https://zhaonan.wang
   
 ---
