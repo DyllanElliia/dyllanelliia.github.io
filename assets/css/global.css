@@ -462,22 +462,21 @@ div.lazy {
     border-bottom-color: rgba(255, 255, 255, 0.75) !important;
 }
 
-/* ===== Publications hover - 低饱和霓虹彩虹外发光 (仅横屏) ===== */
+/* ===== Publications hover - 低饱和霓虹彩虹外发光在白卡背后 (仅横屏) ===== */
 @media (orientation: landscape) {
     .pub-glow-item {
         position: relative;
         z-index: 0;
-        border-radius: 0.6rem;
-        transition: background-color 0.35s ease, transform 0.35s ease;
+        transition: transform 0.35s ease;
     }
 
-    /* 模糊的彩虹光带，藏在 row 背后，hover 时显现 */
+    /* 彩虹光带：垫在白卡最底层，hover 时从卡片边缘向外发光 */
     .pub-glow-item::before {
         content: "";
         position: absolute;
-        inset: -4px;
-        z-index: -1;
-        border-radius: 0.75rem;
+        inset: -7px;
+        z-index: -2;
+        border-radius: 0.95rem;
         background: conic-gradient(
             from 0deg,
             hsl(0, 70%, 83%), hsl(45, 70%, 83%), hsl(90, 70%, 83%),
@@ -485,15 +484,27 @@ div.lazy {
             hsl(270, 70%, 83%), hsl(315, 70%, 83%), hsl(360, 70%, 83%)
         );
         opacity: 0;
-        filter: blur(10px);
+        filter: blur(14px);
         transition: opacity 0.4s ease;
         pointer-events: none;
     }
 
-    /* hover: row 变纯白盖住中心，只留边缘的霓虹光晕 */
+    /* 白色卡面：盖在彩虹之上，让中心保持纯白，只露边缘光晕 */
+    .pub-glow-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
+    /* hover: 抬升层级，显现背后的霓虹光晕与白卡面 */
     .pub-glow-item:hover {
         z-index: 1;
-        background-color: #fff;
         transform: translateY(-1px);
     }
 
@@ -501,10 +512,14 @@ div.lazy {
         opacity: 0.9;
         animation: pub-hue-rotate 4s linear infinite;
     }
+
+    .pub-glow-item:hover::after {
+        opacity: 1;
+    }
 }
 
 /* HSV/色相旋转，让彩虹光带流动 */
 @keyframes pub-hue-rotate {
-    to { filter: blur(10px) hue-rotate(360deg); }
+    to { filter: blur(14px) hue-rotate(360deg); }
 }
 
