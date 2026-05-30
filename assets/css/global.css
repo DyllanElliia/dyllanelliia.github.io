@@ -484,7 +484,7 @@ div.lazy {
             hsl(270, 70%, 83%), hsl(315, 70%, 83%), hsl(360, 70%, 83%)
         );
         opacity: 0;
-        filter: blur(14px);
+        filter: blur(7px);
         /* 消失：彩虹先淡出(无延迟) */
         transition: opacity 0.01s ease;
         pointer-events: none;
