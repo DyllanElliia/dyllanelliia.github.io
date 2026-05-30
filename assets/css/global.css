@@ -486,7 +486,7 @@ div.lazy {
         opacity: 0;
         filter: blur(14px);
         /* 消失：彩虹先淡出(无延迟) */
-        transition: opacity 0.10s ease;
+        transition: opacity 0.01s ease;
         pointer-events: none;
     }
 
@@ -500,7 +500,7 @@ div.lazy {
         background-color: #fff;
         opacity: 0;
         /* 消失：白卡等彩虹淡出后再淡出 */
-        transition: opacity 0.10s ease 0.125s;
+        transition: opacity 0.2s ease 0.01s;
         pointer-events: none;
     }
 
@@ -513,13 +513,13 @@ div.lazy {
     /* 出现①：白卡先快速浮现，无延迟 */
     .pub-glow-item:hover::after {
         opacity: 1;
-        transition: opacity 0.125s ease 0s;
+        transition: opacity 0.01s ease 0s;
     }
 
     /* 出现②：白卡浮现后，背后的霓虹光晕再淡入 */
     .pub-glow-item:hover::before {
         opacity: 0.9;
-        transition: opacity 0.1s ease 0.125s;
+        transition: opacity 0.2s ease 0.015s;
         animation: pub-hue-rotate 4s linear infinite;
     }
 }
