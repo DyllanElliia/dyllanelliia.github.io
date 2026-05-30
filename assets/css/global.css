@@ -485,11 +485,12 @@ div.lazy {
         );
         opacity: 0;
         filter: blur(14px);
-        transition: opacity 0.4s ease;
+        /* 消失：彩虹先淡出(无延迟) */
+        transition: opacity 0.3s ease;
         pointer-events: none;
     }
 
-    /* 白色卡面：盖在彩虹之上，让中心保持纯白，只露边缘光晕 */
+    /* 白色卡面 + 霓虹线框：盖在彩虹之上，中心始终纯白 */
     .pub-glow-item::after {
         content: "";
         position: absolute;
@@ -497,8 +498,14 @@ div.lazy {
         z-index: -1;
         border-radius: 0.5rem;
         background-color: #fff;
+        border: 1.5px solid hsl(320, 55%, 82%);
+        box-shadow:
+            0 0 7px hsl(320, 60%, 80%),
+            0 0 2px hsl(320, 65%, 85%),
+            inset 0 0 5px hsl(320, 50%, 90%);
         opacity: 0;
-        transition: opacity 0.4s ease;
+        /* 消失：白卡(含线框)等彩虹淡出后再淡出 */
+        transition: opacity 0.25s ease 0.3s;
         pointer-events: none;
     }
 
@@ -508,18 +515,28 @@ div.lazy {
         transform: translateY(-1px);
     }
 
-    .pub-glow-item:hover::before {
-        opacity: 0.9;
-        animation: pub-hue-rotate 4s linear infinite;
-    }
-
+    /* 出现①：白卡(含霓虹线框)先快速浮现，无延迟 */
     .pub-glow-item:hover::after {
         opacity: 1;
+        transition: opacity 0.18s ease 0s;
+        animation: pub-border-hue 4s linear infinite;
+    }
+
+    /* 出现②：白卡浮现后，背后的霓虹光晕再淡入 */
+    .pub-glow-item:hover::before {
+        opacity: 0.9;
+        transition: opacity 0.35s ease 0.18s;
+        animation: pub-hue-rotate 4s linear infinite;
     }
 }
 
-/* HSV/色相旋转，让彩虹光带流动 */
+/* HSV/色相旋转：背后彩虹光晕流动 */
 @keyframes pub-hue-rotate {
     to { filter: blur(14px) hue-rotate(360deg); }
+}
+
+/* HSV/色相旋转：白卡霓虹线框流动(白底无饱和度，仅边框/光晕变色) */
+@keyframes pub-border-hue {
+    to { filter: hue-rotate(360deg); }
 }
 
