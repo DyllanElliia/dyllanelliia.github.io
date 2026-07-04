@@ -22,4 +22,5 @@ links:
   ArXiv: https://arxiv.org/abs/2602.22666
   Code: https://github.com/DyllanElliia/ArtPro
   Poster: https://raw.githubusercontent.com/DyllanElliia/dyllanelliia.github.io/main/assets/images/poster/cvpr26_artpro_poster.png
+
 ---
