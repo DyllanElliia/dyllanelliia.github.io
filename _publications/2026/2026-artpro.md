@@ -20,6 +20,6 @@ authors:
   - Changhe Tu
 links:
   ArXiv: https://arxiv.org/abs/2602.22666
-  Code Coming Soon in June: https://zhaonan.wang
-  
+  Code: https://github.com/DyllanElliia/ArtPro
+  Poster: https://raw.githubusercontent.com/DyllanElliia/dyllanelliia.github.io/main/assets/images/poster/cvpr26_artpro_poster.png
 ---
